@@ -23,7 +23,6 @@ public class LetterCaseStringPermutation {
         List<String> permutations = new ArrayList<String>();
         if (str == null)
             return permutations;
-
         permutations.add(str);
         int strLen = str.length();
 
@@ -87,8 +86,13 @@ public class LetterCaseStringPermutation {
         List<String> result = permutation("ab7c");
         // List<String> result = permutation2("ab7c");
         System.out.println("Result: " + result); // Result: [ab7c, Ab7c, aB7c, AB7c, ab7C, Ab7C, aB7C, AB7C]
+
         result = permutation("ad52");
         // result = permutation2("ad52");
         System.out.println("Result: " + result); // Result: [ad52, Ad52, aD52, AD52]
+
+        result = permutation("rc5n");
+        // result = permutation2("rc5n");
+        System.out.println("Result: " + result); // Result: [rc5n, Rc5n, rC5n, RC5n, rc5N, Rc5N, rC5N, RC5N]
     }
 }
