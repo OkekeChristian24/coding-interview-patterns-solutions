@@ -45,4 +45,16 @@ class KLargestElementInStream {
 
         return this.minHeap.peek();
     }
+
+    public static void main(String[] args) {
+        int[] nums;
+        int k;
+        nums = new int[] { 3, 1, 5, 12, 2, 11 };
+        k = 4;
+        KLargestElementInStream kthLargestNumber = new KLargestElementInStream(k, nums);
+        System.out.println(k + "th largest number is: " + kthLargestNumber.add(6)); // 4th largest number is: 5
+        System.out.println(k + "th largest number is: " + kthLargestNumber.add(13)); // 4th largest number is: 6
+        System.out.println(k + "th largest number is: " + kthLargestNumber.add(4)); // 4th largest number is: 6
+
+    }
 }
