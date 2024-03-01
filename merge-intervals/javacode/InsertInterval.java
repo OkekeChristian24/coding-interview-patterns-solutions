@@ -39,7 +39,6 @@ class InsertInterval {
 
     public static List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         List<Interval> result = new ArrayList<>();
-        Interval interval;
         int i = 0;
         for (; i < intervals.size() && intervals.get(i).end < newInterval.start; i++) {
             result.add(intervals.get(i));
