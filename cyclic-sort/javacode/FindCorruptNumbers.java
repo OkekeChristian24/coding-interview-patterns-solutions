@@ -1,5 +1,5 @@
 public class FindCorruptNumbers {
-    public static int[] findNumbers(int[] nums) {
+    public static int[] findMissingAndDuplicate(int[] nums) {
         int[] missing = new int[2];
         missing[0] = -1;
         missing[1] = -1;
