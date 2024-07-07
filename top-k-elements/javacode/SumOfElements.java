@@ -40,6 +40,27 @@ public class SumOfElements {
         return sum;
     }
 
+    // Time complexity: O(N * logK2)
+    // Space complexity: O(K2)
+    public static int findSumOfElements2(int[] nums, int k1, int k2) {
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
+
+        for (int i = 0; i < nums.length; i++) {
+            if (i < k2 - 1)
+                maxHeap.add(nums[i]);
+            else if (maxHeap.peek() > nums[i]) {
+                maxHeap.poll();
+                maxHeap.add(nums[i]);
+            }
+        }
+        int sum = 0;
+        for (int i = 0; i < (k2 - k1 - 1); i++)
+            sum += maxHeap.poll();
+
+        return sum;
+
+    }
+
     public static void main(String[] args) {
         int[] nums;
         int k1;

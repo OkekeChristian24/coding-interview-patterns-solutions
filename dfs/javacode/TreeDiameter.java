@@ -37,11 +37,9 @@ class TreeDiameter {
         int leftChildHeight = getDiameterRecursive(currentNode.left);
         int rightChildHeight = getDiameterRecursive(currentNode.right);
 
-        int currentNodeHeight = Math.max(leftChildHeight, rightChildHeight) + 1;
-
         diameter = Math.max(diameter, (leftChildHeight + rightChildHeight + 1));
-
-        return currentNodeHeight;
+        
+        return Math.max(leftChildHeight, rightChildHeight) + 1;
 
     }
 

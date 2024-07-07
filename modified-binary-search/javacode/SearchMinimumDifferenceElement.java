@@ -1,4 +1,4 @@
-package javacode;
+// package javacode;
 
 public class SearchMinimumDifferenceElement {
     public static int search(int[] arr, int key) {
